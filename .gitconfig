@@ -1,0 +1,19 @@
+[user]
+  name = username
+  email = username@example.com
+[core]
+  excludesfile = /Users/username/.gitignore_global
+[alias]
+  st = status
+  br = branch
+  ci = commit
+  co = checkout
+  po = push origin HEAD
+  fo = fetch origin
+  delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[grep]
+  lineNumber = true
